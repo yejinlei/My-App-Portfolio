@@ -8,111 +8,80 @@
     tools:context="com.example.yejinlei.my_app_portfolio.MainActivity"
     android:clickable="true">
 
-    <LinearLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:fillViewport="false">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="67dp"
-        android:layout_gravity="center_horizontal" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="58dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="My App Portfolio"
-            android:id="@+id/textView2"
-            android:textColor="@color/background_floating_material_light"
-            android:singleLine="false"
-            android:autoText="false"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp" />
-
-        <Space
+            <Space
             android:layout_width="match_parent"
             android:layout_height="67dp"
             android:layout_gravity="center_horizontal" />
 
         <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="My Nanodegree Apps!"
-    android:id="@+id/textView"
-    android:layout_above="@+id/button"
-    android:layout_alignStart="@+id/button"
-    android:autoText="false"
-    android:textAlignment="center" />
-
-    <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="POPULAR MOVIES"
-    android:id="@+id/button"
-    android:layout_above="@+id/button2"
-    android:layout_alignStart="@+id/button2"
-    android:onClick="myClickbutton" />
-
-    <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="STOCK HAWK"
-    android:id="@+id/button2"
-    android:layout_above="@+id/button3"
-    android:layout_centerHorizontal="true"
-    android:onClick="myClickbutton2" />
-
-    <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="BUILD IT BIGGER"
-    android:id="@+id/button3"
-    android:layout_above="@+id/button4"
-    android:layout_centerHorizontal="true"
-    android:onClick="myClickbutton3" />
-
-    <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="MAKE YOUR APP MATERIAL"
-    android:id="@+id/button4"
-    android:layout_centerVertical="true"
-    android:layout_centerHorizontal="true"
-    android:onClick="myClickbutton4" />
-
-    <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="GO UBIQUITOUS"
-    android:id="@+id/button5"
-    android:layout_below="@+id/button4"
-    android:layout_alignStart="@+id/button4"
-    android:onClick="myClickbutton5" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/title"
+            android:id="@+id/textView"
+            android:layout_above="@+id/button"
+            android:autoText="false"
+            android:textAlignment="center" />
 
         <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CAPSTONE"
-        android:id="@+id/button6"
-        android:layout_alignStart="@+id/button5"
-        android:layout_below="@+id/button5"
-        android:onClick="myClickbutton6" />
+            style="@style/CustomButtonStyle"
+            android:text="POPULAR MOVIES"
+            android:id="@+id/button"
+            android:layout_above="@+id/button2"
+            android:onClick="myClickbutton" />
 
-    </LinearLayout>
+        <Button
+            style="@style/CustomButtonStyle"
+            android:text="STOCK HAWK"
+            android:id="@+id/button2"
+            android:layout_above="@+id/button3"
+            android:onClick="myClickbutton2" />
+
+        <Button
+            style="@style/CustomButtonStyle"
+            android:text="BUILD IT BIGGER"
+            android:id="@+id/button3"
+            android:layout_above="@+id/button4"
+            android:onClick="myClickbutton3" />
+
+        <Button
+            style="@style/CustomButtonStyle"
+            android:text="MAKE YOUR APP MATERIAL"
+            android:id="@+id/button4"
+            android:onClick="myClickbutton4" />
+
+        <Button
+            style="@style/CustomButtonStyle"
+            android:text="GO UBIQUITOUS"
+            android:id="@+id/button5"
+            android:layout_above="@+id/button4"
+            android:onClick="myClickbutton5" />
+
+        <Button
+            style="@style/CustomButtonStyle"
+            android:text="CAPSTONE"
+            android:id="@+id/button6"
+            android:layout_below="@+id/button5"
+            android:onClick="myClickbutton6" />
+
+        </LinearLayout>
+    </ScrollView>
 </android.support.design.widget.CoordinatorLayout>
